@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SortController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/sort", [SortController::class, 'sort']);
+Route::post("/sort", [SortController::class, 'sortString']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
