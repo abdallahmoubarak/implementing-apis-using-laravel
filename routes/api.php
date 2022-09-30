@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SortController;
 use App\Http\Controllers\PlaceValueController;
+use App\Http\Controllers\TranslateController;
+
 
 
 /*
@@ -19,6 +21,8 @@ use App\Http\Controllers\PlaceValueController;
 
 Route::post("/sort", [SortController::class, 'sortString']);
 Route::post("/number", [PlaceValueController::class, 'placeValue']);
+Route::post("/translate", [TranslateController::class, 'translate']);
+
 
 
 
