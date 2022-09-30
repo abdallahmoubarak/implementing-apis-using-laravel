@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SortController;
 use App\Http\Controllers\PlaceValueController;
 use App\Http\Controllers\TranslateController;
+use App\Http\Controllers\PrefixNotationController;
+
 
 
 
@@ -22,6 +24,8 @@ use App\Http\Controllers\TranslateController;
 Route::post("/sort", [SortController::class, 'sortString']);
 Route::post("/number", [PlaceValueController::class, 'placeValue']);
 Route::post("/translate", [TranslateController::class, 'translate']);
+Route::post("/expression", [PrefixNotationController::class, 'calculate']);
+
 
 
 
