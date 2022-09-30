@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SortController;
+use App\Http\Controllers\PlaceValueController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,8 @@ use App\Http\Controllers\SortController;
 */
 
 Route::post("/sort", [SortController::class, 'sortString']);
+Route::post("/number", [PlaceValueController::class, 'placeValue']);
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
